@@ -2,7 +2,7 @@
 
 Miscellanea di funzioni e dati di supporto al manuale 'Analisi dei dati in Psicologia', Pastore M., Il Mulino, 2015.
 
-URL: https://www.mulino.it/isbn/9788815258984
+URL: http://147.162.146.188/~pastore/Ilmulino.html
 
 # Set up
 
