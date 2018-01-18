@@ -8,5 +8,11 @@ URL: https://www.mulino.it/isbn/9788815258984
 
 To install this github version type in R:
 
+```{r}
+#if devtools is not installed yet: 
+#install.packages("devtools") 
+library(devtools)
+install_github("masspastore/ADati")
+```
 
 
