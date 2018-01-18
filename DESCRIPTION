@@ -1,0 +1,15 @@
+Package: ADati
+Type: Package
+Title: Analisi dei dati in Psicologia
+Version: 4.8
+Date: 2018-01-15
+Author: Massimiliano Pastore
+Maintainer: Massimiliano Pastore <massimiliano.pastore@unipd.it>
+Depends: lavaan
+Suggests: gtools, MASS
+Description: Contiene una miscellanea di funzioni e dati di supporto al manuale 'Anali-si dei dati in Psicologia', Pastore M., Il Mulino, 2015.
+URL: https://www.mulino.it/isbn/9788815258984
+Encoding: UTF-8
+Namespace: auto
+License: GPL-2
+

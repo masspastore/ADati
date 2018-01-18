@@ -1,0 +1,8 @@
+exportPattern("^[[:alpha:]]+")
+import(lavaan)
+importFrom("graphics", "abline", "curve", "hist", "layout", "par")
+importFrom("stats", "BIC", "cor", "density", "dnorm", "fitted",
+             "na.omit", "pf", "pnorm", "ptukey", "qt", "rbinom",
+             "rcauchy", "rchisq", "rexp", "rgamma", "rnorm", "rpois",
+             "rt", "runif", "sd", "var")
+

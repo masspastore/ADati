@@ -1,0 +1,45 @@
+\name{partial.omega2}
+\alias{partial.omega2}
+%- Also NEED an '\alias' for EACH other topic documented here.
+\title{Omega quadro parziale}
+\description{
+Partial omega squared per Anova a uno o piu' fattori tra soggetti.
+}
+\usage{
+partial.omega2(eff.Var, eff.df, err.Var, err.df, eff.lab = NULL)
+}
+%- maybe also 'usage' for other objects documented here.
+\arguments{
+  \item{eff.Var}{vettore con le varianze degli effetti (ricavate dall'ANOVA).}
+  \item{eff.df}{gradi di liberta' delle varianze riportate in \code{eff.Var}.}
+  \item{err.Var}{varianza dell'errore (ricavata dall'ANOVA).}
+  \item{err.df}{gradi di liberta' della varianza riportata in \code{err.Var}.}
+  \item{eff.lab}{etichette degli effetti (opzionale).}
+}
+%\details{
+%Utilizzabile solo per Anova ad uno o più fattori tra soggetti. I gruppi devono avere la stessa numerosità.
+%}
+\value{
+Restituisce gli Omega quadri parziali per tutti gli effetti inseriti.
+}
+\references{Keppel, G. (1991). \emph{Design and analysis}. Prentice Hall, London.}
+\author{Massimiliano Pastore}
+\note{Utilizzabile solo per Anova ad uno o più fattori tra soggetti. 
+I gruppi devono avere la stessa numerosità.}
+%\seealso{ ~~objects to See Also as \code{\link{help}}, ~~~ }
+\examples{
+## anova ad un fattore
+partial.omega2(1104.7,3,150.5,12)
+
+## anova a due fattori
+eff.Var <- c(56,24,72)
+eff.df <- c(2,1,2)
+err.Var <- 18.33
+err.df <- 18
+partial.omega2(eff.Var,eff.df,err.Var,err.df)
+
+## con etichette
+partial.omega2(eff.Var,eff.df,err.Var,err.df,
+c("fattore A","fattore B","interazione"))
+}
+\keyword{htest}

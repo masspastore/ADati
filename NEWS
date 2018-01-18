@@ -1,0 +1,37 @@
+  CHANGES IN ADati VERSION 4.8
+
+CHANGES
+  * rimessa la dipendenza da lavaan, necessaria per la funzione TCD
+
+  CHANGES IN ADati VERSION 4.7
+
+CHANGES
+  * tolta la dipendenza dal pacchetto lavaan, necessario solo per la funzione TCD
+  * tolta la funzione sem.fitresid, ora disponibile come sem.fitres nel pacchetto influence.SEM
+
+  CHANGES IN ADati VERSION 4.6
+
+CHANGES
+  * aggiunta funzione sem.fitresid
+  * aggiornato le call alle funzioni di pacchetti esterni
+  * aggiornato funzione sdsim
+
+  CHANGES IN ADati VERSION 4.5
+
+CHANGES
+  * modificato data frame memoria
+  * aggiunto data frame kidiq
+
+  CHANGES IN ADati VERSION 4.4
+
+CHANGES
+  * aggiunta funzione TCD
+
+  CHANGES IN ADati VERSION 4.3
+
+CHANGES
+  * aggiunto data set Omega
+  * aggiunta funzione sdsim (adapted by original script of Nicole Radziwill)
+
+
+
