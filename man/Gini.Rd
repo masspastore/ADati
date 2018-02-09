@@ -15,7 +15,7 @@ Il data frame contiene le seguenti variabili:
     \itemize{
     \item \code{regione}: chr, denominazione regione.
     \item \code{gini}: num, indice di Gini (1995-2000).
-    \item \code{gini}: num, aspettativa di vita alla nascita (2001).
+    \item \code{life}: num, aspettativa di vita alla nascita (2001).
     \item \code{residenti}: num, popolazione residente (2018).
     \item \code{n.comuni}: num, numero di comuni.
     \item \code{n.provincie}: num, numero di provincie.
