@@ -5,11 +5,9 @@
 
 \description{ 
 Data set fittizio: 
-popolazione di voti ad un esame.} 
+popolazione di numeri casuali.} 
 
 \usage{data(Omega)} 
-
-%\source{Keppel, G. (1991). \emph{Design and analysis}. Prentice Hall, %London.}
 \author{Massimiliano Pastore}
 
 \examples{
