@@ -13,7 +13,7 @@ TCD(fit, yvar = NULL, allmatrices = FALSE)
 \arguments{
   \item{fit}{modello multivariato prodotto dalla funzione \code{sem()} di classe \code{lavaan}.}
   \item{yvar}{facoltativo, vettore con i nomi delle variabili endogene del modello.}
-  \item{allmatrices}{logico, facoltativo, se posto a \code{TRUE}, restituisce una lista con TCD e le matrici \eqn{\Phi} e \eqn{\hat{\Sigma}_{y}}.}
+  \item{allmatrices}{logico, facoltativo, se posto a \code{TRUE}, restituisce una lista con TCD e le matrici \eqn{\Psi} e \eqn{\hat{\Sigma}_{y}}.}
 }
 \details{
 Al momento è utilizzabile solo per modelli senza variabili latenti. 
@@ -23,7 +23,7 @@ Se \code{allmatrices = FALSE} restituisce il valore di TCD.
 
 Se \code{allmatrices = TRUE} restituisce una lista:
   \item{TCD }{Total Coefficient of Determination}
-  \item{PS }{Matrice di covarianza tra i residui del modello \eqn{\Phi}}
+  \item{PS }{Matrice di covarianza tra i residui del modello \eqn{\Psi}}
   \item{Sy }{Matrice di covarianza riprodotta \eqn{\hat{\Sigma}_{y}}}
 }
 
