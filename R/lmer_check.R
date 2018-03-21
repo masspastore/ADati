@@ -34,5 +34,5 @@ lmer_check <- function(fit,all=TRUE) {
   } else {
     for (j in 1:length(PLOT)) print(PLOT[[j]])
   }
-  
+  return(PLOT)
 }
