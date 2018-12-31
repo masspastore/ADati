@@ -1,5 +1,6 @@
-### Bayes Factor approssimato
-#rm(list=ls())
+#' Bayes Factor approssimato
+#' @param M0 = Modello nullo
+#' @param M1 = Modello target
 approxBF <- function(M0,M1) {
   (Bic0 <- BIC(M0))
   (Bic1 <- BIC(M1))

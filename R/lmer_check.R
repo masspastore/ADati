@@ -2,7 +2,7 @@
 lmer_check <- function(fit,all=TRUE) {
   
   par(ask=!all)
-  
+
   ## aggrego dati per i grafici
   dati <- data.frame(fitted=fitted(fit),resid=resid(fit))
   dati$absres <- sqrt(abs(dati$resid))
@@ -28,11 +28,6 @@ lmer_check <- function(fit,all=TRUE) {
     theme(plot.title =element_text(hjust=.5))
   
   PLOT <- list(P1,P2,P3,P4)
-  
-  if (all) {
-    cowplot::plot_grid(plotlist = PLOT)  
-  } else {
-    for (j in 1:length(PLOT)) print(PLOT[[j]])
-  }
+  for (j in 1:length(PLOT)) print(PLOT[[j]])
   return(PLOT)
 }

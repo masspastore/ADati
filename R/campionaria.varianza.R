@@ -28,6 +28,11 @@ campionaria.varianza <- function(Omega,n=2,replace=FALSE,exact=FALSE,grafico=TRU
       exact <- FALSE
     }
     
+    if (N<n){
+      warning("Sample size greater than population size; replace must be TRUE")
+      replace <- TRUE
+    }
+    
     # parametri 
     (mi <- mean(Omega))
     (sigma2 <- var(Omega)*((N-1)/N))
@@ -43,20 +48,18 @@ campionaria.varianza <- function(Omega,n=2,replace=FALSE,exact=FALSE,grafico=TRU
         M <- paste("n=",n," campioni=",nrow(X),sep="")
     } else {
         # campioni casuali
-        sx <- NULL
-        sx.nc <- NULL
-        for (b in 1:B) {
-            x <- sample(Omega,n,replace=replace)
-            vx <- var(x)
-            sx <- c(sx,vx)
-            sx.nc <- c(sx.nc,(vx*(n-1)/n))
-            if (parziali) {
-                par(mfrow=c(1,1))
-                H <- hist(sx.nc,col="gray",main=paste("N=",N," n=",n," rep.=",b,sep=""),
-                    freq=FALSE) 
+        x <- replicate(B, sample(Omega,n,replace=replace))
+        sx <- apply(x,2,var)
+        sx.nc <- sx*(n-1)/n      
+        
+        if (parziali) {
+          for (b in 1:B) {
+              par(mfrow=c(1,1))
+              H <- hist(sx.nc[1:b],col="gray",main=paste("N=",N," n=",n," rep.=",b,sep=""),
+                  freq=FALSE) 
             }
         }
-        M <- paste("n=",n," rep.=",b,sep="")
+        M <- paste("n=",n," rep.=",B,sep="")
     }
 
     if (grafico) {

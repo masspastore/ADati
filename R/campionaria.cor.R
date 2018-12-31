@@ -39,18 +39,21 @@ campionaria.cor <- function(rho=0,N=10,n=3,replace=FALSE,exact=FALSE,grafico=TRU
                                     " campioni=",nrow(i),sep="")
     } else {
         # campioni casuali
-        for (b in 1:B) {
-            i <- sample(1:N,n,replace=replace)
-            rx <- c(rx,cor(Omega[i,])[2,1])
-            if (parziali) {
+        rx <- sapply(1:B, function(b){
+          i <- sample(1:N,n,replace=replace)
+          cor(Omega[i,])[2,1]
+        })  
+      
+        if (parziali) {
+          for (b in 1:B) {
                 par(mfrow=c(1,1))
-                H <- hist(rx,col="gray",main=paste("N=",N," n=",n,
+                H <- hist(rx[1:b],col="gray",main=paste("N=",N," n=",n,
                        " rho=",round(cor(Omega)[2,1],3)," rep.=",b,sep=""),
                        freq=FALSE,xlim=c(-1,1))
             }
         }
         M <- paste("N=",N," n=",n," rho=",round(cor(Omega)[2,1],3),
-                                            " rep.=",b,sep="")
+                                            " rep.=",B,sep="")
     }
     
     if (grafico) {

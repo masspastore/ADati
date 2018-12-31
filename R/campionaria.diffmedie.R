@@ -1,5 +1,11 @@
 ### distribuzione campionaria della media
 ## richiede gtools
+#rm(list=ls())
+#Omega1 <- rnorm(100)
+#Omega2 <- rnorm(100)
+#n1 <- 3
+#n2 <- 4
+
 campionaria.diffmedie <- function(Omega1,n1=2,n2=n1,Omega2=NULL,
                         replace=FALSE,exact=FALSE,grafico=TRUE,B=1000,
                                   parziali=FALSE) 
@@ -66,21 +72,24 @@ campionaria.diffmedie <- function(Omega1,n1=2,n2=n1,Omega2=NULL,
         M <- paste("campioni = ",length(Sdiff),sep="")
     } else {
         # campioni casuali
-        Sdiff <- NULL
-        for (b in 1:B) {
-            x1 <- sample(Omega1,n1,replace=replace)
-            x2 <- sample(Omega2,n2,replace=replace)
-            Sdiff <- c(Sdiff,(mean(x1)-mean(x2)))
-            if (parziali) {
+        Sdiff <- sapply(1:B, function(b){
+          x1 <- sample(Omega1,n1,replace=replace)
+          x2 <- sample(Omega2,n2,replace=replace)
+          mean(x1)-mean(x2)
+        })
+      
+      
+        if (parziali) {
+          for (b in 1:B) {
                 par(mfrow=c(1,1))
-                H <- hist(Sdiff,col="gray",main=paste("replicazioni = ",b,sep=""),
+                H <- hist(Sdiff[1:b],col="gray",main=paste("repliche = ",b,sep=""),
                     freq=FALSE)
             }
         }
         H <- density(Sdiff)
         xmax <- max(H$x)
         Ymax <- max(H$y)
-        M <- paste("replicazioni = ",b,sep="")
+        M <- paste("repliche = ",B,sep="")
     }
 
     # grafico finale

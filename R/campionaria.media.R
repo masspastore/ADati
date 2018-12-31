@@ -1,8 +1,16 @@
-### distribuzione campionaria della media
+#' Distribuzione campionaria della media
+#' @param Omega = vettore numerico
+#' @param n = numerosita campionaria
+#' @param replace = logico, l'estrazione \'e con reinserimento?
+#' @param exact = logico, indica se creare tutti i campioni possibili
+#' @param grafico = logico, indica se produrre il grafico finale
+#' @param B = numero di campioni da estrarre
+#' @param parziali = logico, indica se produrre i grafici parziali 
+
 #rm(list=ls())
 #set.seed(20121018)
 #Omega <- sample(1:20,150,TRUE)
-##Omega <- Omega[1:5]
+#Omega <- Omega[1:5]
 #n <- 2
 #replace=FALSE;
 #exact=FALSE;
@@ -46,20 +54,21 @@ campionaria.media <- function(Omega,n=2,replace=FALSE,exact=FALSE,grafico=TRUE,B
         M <- paste("N=",N," n=",n," campioni=",nrow(X),sep="")
     } else {
         # campioni casuali
-        mx <- NULL
-        for (b in 1:B) {
-            x <- sample(Omega,n,replace=replace)
-            mx <- c(mx,mean(x))
-            if (parziali) {
-                par(mfrow=c(1,1))
-                H <- hist(mx,col="gray",main=paste("N=",N," n=",n," rep.=",b,sep=""),
-                    freq=FALSE)
-            }
+        x <- replicate( B, sample(Omega,n,replace=replace) )
+        mx <- apply(x,2, mean)
+        
+        if (parziali) {
+          for (b in 1:B) {
+            par(mfrow=c(1,1))
+            H <- hist(mx[1:b],col="gray",main=paste("N=",N," n=",n," rep.=",b,sep=""),
+                      freq=FALSE)
+          }
         }
+        
         H <- density(mx)
         xmax <- max(H$x)
         Ymax <- max(H$y)
-        M <- paste("N=",N," n=",n," rep.=",b,sep="")
+        M <- paste("N=",N," n=",n," rep.=",B,sep="")
     }
     
     if (grafico) {

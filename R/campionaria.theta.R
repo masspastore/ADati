@@ -37,20 +37,20 @@ campionaria.theta <- function(Omega,n=2,theta='mean',replace=FALSE,exact=FALSE,g
         M <- paste("N=",N," n=",n," campioni=",nrow(X),sep="")
     } else {
         # campioni casuali
-        mx <- NULL
-        for (b in 1:B) {
-            x <- sample(Omega,n,replace=replace)
-            mx <- c(mx,theta(x))
-            if (parziali) {
+        x <- replicate( B, sample(Omega,n,replace=replace) )
+        mx <- apply(x,2, theta)
+        
+        if (parziali) {
+          for (b in 1:B) {
                 par(mfrow=c(1,1))
-                H <- hist(mx,col="gray",main=paste("N=",N," n=",n," rep.=",b,sep="",xlab=paste(funzione,'(x)',sep='')),
+                H <- hist(mx[1:b],col="gray",main=paste("N=",N," n=",n," rep.=",b,sep="",xlab=paste(funzione,'(x)',sep='')),
                     freq=FALSE)
             }
         }
         H <- density(mx)
         xmax <- max(H$x)
         Ymax <- max(H$y)
-        M <- paste("N=",N," n=",n," rep.=",b,sep="")
+        M <- paste("N=",N," n=",n," rep.=",B,sep="")
     }
     
     if (grafico) {
