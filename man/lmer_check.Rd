@@ -27,9 +27,15 @@ I grafici sono gli stessi che si ottengono con il comando \code{plot()} a partir
 \note{La funzione richiede il pacchetto grafico \code{ggplot2}.}
 %\seealso{\code{\link{Cohen.f}}}
 \examples{
-require(lme4)
-data(sherifdat)
-fit <- lmer(y~time+condition+(1|group),data=sherifdat)
-lmer_check(fit)
+# require(lme4)
+# data(sherifdat)
+# fit <- lmer(y~time+condition+(1|group),data=sherifdat)
+# lmer_check(fit)
+
+## per ottenere un grafico unico
+# require(cowplot)
+# PLOTS <- lmer_check(fit)
+# cowplot::plot_grid( plotlist = PLOTS )
+
 }
 \keyword{htest}

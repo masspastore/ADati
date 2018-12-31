@@ -40,7 +40,7 @@ Restituisce una lista con i seguenti elementi:
 \examples{
 require(MASS)
 require(gtools)
-campionaria.cor(0.8,200,30,B=10)
-campionaria.cor(0.8,20,3,exact=TRUE,grafico=FALSE)
+campionaria.cor( 0.8, 200, 30, B = 10 )
+campionaria.cor( 0.8, 20, 3, exact = TRUE, grafico = FALSE )
 }
 \keyword{htest}
