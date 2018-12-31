@@ -1,8 +1,7 @@
 exportPattern("^[[:alpha:]]+")
-import(lavaan,ggplot2,cowplot)
-importFrom("graphics", "abline", "curve", "hist", "layout", "par")
-importFrom("stats", "BIC", "cor", "density", "dnorm", "fitted",
-             "na.omit", "pf", "pnorm", "ptukey", "qt", "rbinom",
-             "rcauchy", "rchisq", "rexp", "rgamma", "rnorm", "rpois",
-             "rt", "runif", "sd", "var","hatvalues","formula")
-
+import(ggplot2,lavaan)
+importFrom("graphics", "abline", "curve", "hist", "par", "layout")
+importFrom("stats","BIC","formula","density", "dnorm", 
+           "na.omit", "var","cor","qt", "sd", "pnorm",
+          "hatvalues", "pf", "rbinom", "rcauchy", "rchisq", "rexp",
+          "rgamma", "rnorm", "rpois", "rt", "runif","ptukey")

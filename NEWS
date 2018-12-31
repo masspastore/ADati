@@ -1,3 +1,9 @@
+  CHANGES IN ADati VERSION 5.1
+
+CHANGES
+  * ottimizzate le funzioni di campionamento, tolti i cicli for
+  * organizzato meglio NAMESPACE
+  
   CHANGES IN ADati VERSION 5.0
 
 CHANGES
