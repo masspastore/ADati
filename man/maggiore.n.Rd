@@ -6,7 +6,7 @@
 Trova il maggiore tra un insieme di numeri. Funzione di esempio per il ciclo \code{for}.
 }
 \usage{
-maggiore.n(x)
+maggiore.n( x )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

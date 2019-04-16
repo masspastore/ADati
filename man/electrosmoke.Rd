@@ -9,7 +9,7 @@ Data set fittizio: Dati di una ricerca sull'utilizzo della sigaretta elettronica
 }
 
 \usage{
-data(electrosmoke)
+data( electrosmoke )
 }
 
 \format{

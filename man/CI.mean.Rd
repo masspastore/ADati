@@ -6,7 +6,7 @@
 Calcola l'intervallo di confidenza relativo ad una o piu' medie campionarie.
 }
 \usage{
-CI.mean(x, sigma, n, level = 0.95)
+CI.mean( x, sigma, n, level = 0.95 )
 }
 %- maybe also 'usage for other objects documented here.
 \arguments{

@@ -10,7 +10,7 @@ extradomestica in un campione di 81 donne con figli e non.
 }
 
 \usage{
-data(donne)
+data( donne )
 }
 
 \format{

@@ -7,7 +7,7 @@
 Data set fittizio: redditi giornalieri di 2000 soggetti di nazionalita' differenti.
 }
 \usage{
-data(redditi)
+data( redditi )
 }
 %- maybe also 'usage' for other objects documented here.
 

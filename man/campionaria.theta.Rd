@@ -6,8 +6,8 @@
 Produce la distribuzione campionaria della generica statistica \code{theta}.
 }
 \usage{
-campionaria.theta(Omega, n = 2, theta = 'mean', replace = FALSE,  
-                exact = FALSE, grafico = TRUE, B = 1000, parziali = FALSE)
+campionaria.theta( Omega, n = 2, theta = 'mean', replace = FALSE,  
+                exact = FALSE, grafico = TRUE, B = 1000, parziali = FALSE )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

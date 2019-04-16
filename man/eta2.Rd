@@ -6,7 +6,7 @@
 Calcola Eta quadro, misura di associazione, per ANOVA a fattore singolo.
 }
 \usage{
-eta2(SS.eff,SS.tot)
+eta2( SS.eff, SS.tot )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

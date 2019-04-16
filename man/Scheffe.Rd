@@ -6,7 +6,7 @@
 Esegue dei confronti multipli tra medie utilizzando la correzione di Scheffe'.
 }
 \usage{
-Scheffe(mx, n, MSerr, w = NULL)
+Scheffe( mx, n, MSerr, w = NULL )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

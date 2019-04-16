@@ -6,7 +6,7 @@
 Partial omega squared per Anova a uno o piu' fattori tra soggetti.
 }
 \usage{
-partial.omega2(eff.Var, eff.df, err.Var, err.df, eff.lab = NULL)
+partial.omega2( eff.Var, eff.df, err.Var, err.df, eff.lab = NULL )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

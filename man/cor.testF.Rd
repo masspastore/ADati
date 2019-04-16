@@ -7,7 +7,7 @@
  osservato con quello ipotizzato nella popolazione.
 }
 \usage{
-cor.testF(r,N,rho=0,alternative=c("two.sided","less","greater"))
+cor.testF( r, N, rho = 0, alternative = c("two.sided","less","greater") )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

@@ -7,7 +7,7 @@ Data set
 fittizio: matrice con 58 soggetti studenti. 
 } 
 
-\usage{data(studenti)} 
+\usage{data( studenti )} 
 
 \format{
 Il data frame contiene le seguenti variabili:

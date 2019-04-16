@@ -6,7 +6,7 @@
 Esegue dei confronti a coppie tra medie utilizzando la correzione di Tukey.
 }
 \usage{
-Tukey(x, n, MSerr, MSdf, xlab = NA)
+Tukey( x, n, MSerr, MSdf, xlab = NA )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

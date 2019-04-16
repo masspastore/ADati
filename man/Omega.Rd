@@ -7,7 +7,7 @@
 Data set fittizio: 
 popolazione di numeri casuali.} 
 
-\usage{data(Omega)} 
+\usage{data( Omega )} 
 \author{Massimiliano Pastore}
 
 \examples{

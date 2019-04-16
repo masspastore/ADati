@@ -6,7 +6,7 @@
 Aggiusta un vettore di probabilita' utilizzando il False Discovery Rate o il metodo Bonferroni.
 }
 \usage{
-adjP(x, type = c("BH", "BY", "B"))
+adjP( x, type = c("BH", "BY", "B") )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

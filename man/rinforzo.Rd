@@ -7,7 +7,7 @@
 Data set fittizio: 
 punteggi ad una serie di problemi di ragionamento di un campione di bambini cui vengono dati tre tipi di rinforzo.} 
 
-\usage{data(rinforzo)} 
+\usage{data( rinforzo )} 
 
 \format{
 Il data frame contiene le seguenti variabili:

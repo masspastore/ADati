@@ -7,7 +7,7 @@ Data set
 fittizio: valutazioni al Trail Making Test per 13 soggetti con deficit attentivo.
 } 
 
-\usage{data(tmt)} 
+\usage{data( tmt )} 
 
 \format{
 Il data frame contiene le seguenti variabili:

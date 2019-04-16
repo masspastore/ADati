@@ -41,6 +41,6 @@ for (j in levels(Y$anno)) plot( hatY ~ ore, data = subset(Y,anno==j))
  
 library( ggplot2 )
 ggplot( Y, aes( ore, hatY ))+facet_wrap(~anno)+
-geom_point()+geom_point(aes(ore,voti),data=studenti,colour="red")
-}
+  geom_point()+geom_point(aes(ore,voti),data=studenti,colour="red")
+} 
 \keyword{htest}

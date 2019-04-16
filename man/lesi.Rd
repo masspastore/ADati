@@ -8,7 +8,7 @@ Data set fittizio: punteggi di 50 soggetti con lesioni cerebrali ad
 un test per la valutazione delle funzioni cognitive e relativo follow up.
 }
 \usage{
-data(lesi)
+data( lesi )
 }
 
 \format{

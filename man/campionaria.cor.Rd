@@ -6,8 +6,8 @@
 Produce la distribuzione campionaria del coefficiente di correlazione.
 }
 \usage{
-campionaria.cor(rho = 0, N = 10, n = 3, replace = FALSE, 
-             exact = FALSE, grafico = TRUE, B = 1000, parziali = FALSE)
+campionaria.cor( rho = 0, N = 10, n = 3, replace = FALSE, 
+             exact = FALSE, grafico = TRUE, B = 1000, parziali = FALSE )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

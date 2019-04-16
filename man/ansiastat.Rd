@@ -10,7 +10,7 @@ l'ansia da esame nei corsi di statistica.
 }
 
 \usage{
-data(ansiastat)
+data( ansiastat )
 }
 
 \format{

@@ -6,9 +6,9 @@
 Produce la distribuzione campionaria di una statistica theta basata su due campioni.
 }
 \usage{
-campionaria.theta2(Omega1, n1 = 2, n2 = n1, Omega2 = NULL, 
+campionaria.theta2( Omega1, n1 = 2, n2 = n1, Omega2 = NULL, 
       theta = 'diff', replace = FALSE, exact = FALSE, 
-      grafico = TRUE, B = 1000, parziali = FALSE)
+      grafico = TRUE, B = 1000, parziali = FALSE )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

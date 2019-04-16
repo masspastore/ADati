@@ -6,7 +6,7 @@
 \description{ 
 Data set fittizio: Relazione tra intelligenza e memoria.} 
 
-\usage{data(memoria)} 
+\usage{data( memoria )} 
 
 \format{
 Il data frame contiene le seguenti variabili:

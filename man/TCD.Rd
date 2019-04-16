@@ -7,7 +7,7 @@ Calcola il coefficiente di determinazione totale a partire da un modello multiva
 }
 \usage{
 # richiede il pacchetto lavaan
-TCD(fit, yvar = NULL, allmatrices = FALSE) 
+TCD( fit, yvar = NULL, allmatrices = FALSE )  
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

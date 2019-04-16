@@ -9,7 +9,7 @@ I soggetti, deprivati di sonno per un certo numero di ore, devono individuare un
 movimento su un radar. 
 } 
 
-\usage{data(radar)} 
+\usage{data( radar )} 
 
 \format{
 Il data frame contiene le seguenti variabili:

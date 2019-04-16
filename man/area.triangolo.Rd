@@ -6,7 +6,7 @@
 Calcola l'area del triangolo. Funzione di esempio.
 }
 \usage{
-area.triangolo(b, h)
+area.triangolo( b, h )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

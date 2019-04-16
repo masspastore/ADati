@@ -7,7 +7,7 @@
 Data set fittizio per esempi di modelli multivariati.
 }
 \usage{
-data(MVM)
+data( MVM )
 }
 %- maybe also 'usage' for other objects documented here.
 

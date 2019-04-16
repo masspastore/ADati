@@ -7,7 +7,7 @@ Trova il primo valore negativo tra una serie di numeri in sequenza.
 Funzione di esempio per il ciclo \code{while}.
 }
 \usage{
-negativo(x)
+negativo( x )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

@@ -7,7 +7,7 @@
 Data set fittizio: 
 popolazione di voti ad un esame.} 
 
-\usage{data(voti)} 
+\usage{data( voti )} 
 \author{Massimiliano Pastore}
 
 \examples{

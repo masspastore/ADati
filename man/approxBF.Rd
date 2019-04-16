@@ -6,7 +6,7 @@
 Calcola il Bayes Factor approssimato a partire da due modelli lineari.
 }
 \usage{
-approxBF(M0, M1)
+approxBF( M0, M1 )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

@@ -7,7 +7,7 @@
 Data set fittizio: 
 punteggi di un campione di bambini su una scala di percezione della pressione subita dai coetanei \code{PPP} e una scala di comportamento passivo.} 
 
-\usage{data(Bullying)} 
+\usage{data( Bullying )} 
 
 \format{
 Il data frame contiene le seguenti variabili:

@@ -6,7 +6,7 @@
 Trova il maggiore tra due numeri. Funzione di esempio per le strutture condizionali.
 }
 \usage{
-maggiore.2(a, b)
+maggiore.2( a, b )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

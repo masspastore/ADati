@@ -8,7 +8,7 @@ Data set fittizio: tempi di esecuzione di una
 prova ad incastro per un campione di 64 soggetti sordomuti.
 }
 \usage{
-data(sordomuti)
+data( sordomuti )
 }
 %- maybe also 'usage' for other objects documented here.
 

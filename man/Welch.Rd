@@ -6,7 +6,7 @@
 Esegue l'Anova univariata corretta con il metodo Welch per varianze non omogenee.
 }
 \usage{
-Welch(n, mx, s2x)
+Welch( n, mx, s2x )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

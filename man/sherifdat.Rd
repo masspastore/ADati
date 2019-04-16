@@ -9,7 +9,7 @@ Il data set contiene le stime della lunghezza del movimento (in pollici) di una 
 }
 
 \usage{
-data(sherifdat)
+data( sherifdat )
 }
 
 \format{

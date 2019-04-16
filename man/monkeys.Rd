@@ -10,7 +10,7 @@ scimmie in funzione del tempo di deprivazione da cibo e
 l'assunzione di due tipologie di farmaci. Gli animali devono 
 identificare degli oggetti e vengono ricompensati quando rispondono correttamente.} 
 
-\usage{data(monkeys)} 
+\usage{data( monkeys )} 
 
 \format{
 Il data frame contiene le seguenti variabili:

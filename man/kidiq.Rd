@@ -9,7 +9,7 @@ Data set fittizio: 434 coppie madri figli.
 }
 
 \usage{
-data(kidiq)
+data( kidiq )
 }
 
 \format{

@@ -7,7 +7,7 @@
 Data set: Indice di Gini e speranza di vita nelle regioni italiane.
 }
 \usage{
-data(Gini)
+data( Gini )
 }
 
 \format{

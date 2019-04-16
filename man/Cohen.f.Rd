@@ -6,7 +6,7 @@
 Calcola l'Effect Size per le medie di k gruppi indipendenti con l'indice \code{f} di Cohen.
 }
 \usage{
-Cohen.f(y,x)
+Cohen.f( y, x )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

@@ -9,7 +9,7 @@ Data set fittizio: ricerca sul clima sociale di quartiere.
 }
 
 \usage{
-data(social)
+data( social )
 }
 
 \format{

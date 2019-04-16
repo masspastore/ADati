@@ -6,7 +6,7 @@
 Eta quadro parziale per ANOVA.
 }
 \usage{
-partial.eta2(SS.eff,SS.err,eff.lab=NULL)
+partial.eta2( SS.eff, SS.err, eff.lab = NULL )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

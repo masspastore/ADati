@@ -9,7 +9,7 @@ Data set fittizio: Dati relativi a 260 studenti di scuola superiore.
 }
 
 \usage{
-data(school)
+data( school )
 }
 
 \format{

@@ -7,7 +7,7 @@
 Data set fittizio: 
 punteggi di attitudine al pronto soccorso in un campione di 562 soggetti.} 
 
-\usage{data(firstaid)} 
+\usage{data( firstaid )} 
 
 \format{
 Il data frame contiene le seguenti variabili:

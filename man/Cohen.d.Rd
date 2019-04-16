@@ -6,7 +6,7 @@
 Calcola l'Effect Size per le medie con l'indice \code{d} di Cohen.
 }
 \usage{
-Cohen.d(x,y=NULL,mu=0,type=c("two.sample","one.sample","paired"))
+Cohen.d( x, y = NULL, mu = 0, type = c("two.sample","one.sample","paired") )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

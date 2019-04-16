@@ -1,3 +1,9 @@
+  CHANGES IN ADati VERSION 5.3
+
+CHANGES
+  * modificata funzione lmer_check()
+  * aggiornate le funzioni moda() e approxBF()
+
   CHANGES IN ADati VERSION 5.2
 
 CHANGES
@@ -12,7 +18,7 @@ CHANGES
   CHANGES IN ADati VERSION 5.0
 
 CHANGES
-  * aggiunta la funzione lmer_check per i grafici delle diagnostiche di un oggetto lmer
+  * aggiunta la funzione lmer_check() per i grafici delle diagnostiche di un oggetto lmer
   * aggiunto il data frame sherifdat (dal pacchetto multilevel)
   * modificate le dipendenze del pacchetto: aggiunti i pacchetti ggplot2 e cowplot
   * corretto errore sulla funzione approxBF

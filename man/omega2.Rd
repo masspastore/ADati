@@ -7,7 +7,7 @@ Calcola Omega quadro a partire da F nell'Anova ad un fattore tra
 soggetti.
 }
 \usage{
-omega2(Fcal, k, n)
+omega2( Fcal, k, n )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

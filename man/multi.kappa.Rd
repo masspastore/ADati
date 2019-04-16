@@ -8,7 +8,7 @@ frequenze con tante righe quanti sono gli oggetti (o i soggetti) valutati (N), e
 tante colonne quante sono le modalita' di classificazione (m). 
 }
 \usage{
-multi.kappa(r, nrater = NA)
+multi.kappa( r, nrater = NA )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

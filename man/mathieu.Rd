@@ -9,7 +9,7 @@ Data set fittizio: Dati di una ricerca sui predittori della soddisfazione e dell
 }
 
 \usage{
-data(mathieu)
+data( mathieu )
 }
 
 \format{

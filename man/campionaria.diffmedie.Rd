@@ -6,9 +6,9 @@
 Produce la distribuzione campionaria della differenza tra le medie di due campioni.
 }
 \usage{
-campionaria.diffmedie(Omega1, n1 = 2, n2 = n1, Omega2 = NULL,
+campionaria.diffmedie( Omega1, n1 = 2, n2 = n1, Omega2 = NULL,
       replace = FALSE, exact = FALSE, grafico = TRUE, B = 1000,
-      parziali = FALSE)
+      parziali = FALSE )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

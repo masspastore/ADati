@@ -6,8 +6,8 @@
 Produce la distribuzione campionaria della media aritmetica.
 }
 \usage{
-campionaria.media(Omega, n = 2, replace = FALSE, exact = FALSE, 
-                       grafico = TRUE, B = 1000, parziali = FALSE)
+campionaria.media( Omega, n = 2, replace = FALSE, exact = FALSE, 
+                       grafico = TRUE, B = 1000, parziali = FALSE )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

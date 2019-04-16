@@ -6,7 +6,7 @@
 Calcola il coefficiente PHI di Cramer per tabelle di contingenza. 
 }
 \usage{
-cramer.phi(chi, N, r, c = r)
+cramer.phi( chi, N, r, c = r )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

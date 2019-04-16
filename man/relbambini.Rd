@@ -7,7 +7,7 @@
 Data set fittizio: 
 punteggi di competenza linguistica in un campione di 81 soggetti.} 
 
-\usage{data(relbambini)} 
+\usage{data( relbambini )} 
 
 \format{
 Il data frame contiene le seguenti variabili:

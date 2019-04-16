@@ -6,8 +6,9 @@
 Simula le distribuzioni campionarie da distribuzioni note.
 }
 \usage{
-sdsim(n, popdist = c("Exp","Normal","Unif","Pois","Cauchy","Binom","Gamma",
-  "Xisq","Tstudent"), param1 = NULL, param2 = NULL, R = 10000)
+sdsim( n, popdist = c("Exp","Normal","Unif","Pois","Cauchy",
+      "Binom","Gamma", "Xisq","Tstudent"), 
+      param1 = NULL, param2 = NULL, R = 10000 )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
