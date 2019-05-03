@@ -1,8 +1,8 @@
 Package: ADati
 Type: Package
 Title: Analisi dei dati in Psicologia
-Version: 5.3
-Date: 2019-04-16
+Version: 5.3.1
+Date: 2019-05-03
 Author: Massimiliano Pastore
 Maintainer: Massimiliano Pastore <massimiliano.pastore@unipd.it>
 Imports: ggplot2, lavaan

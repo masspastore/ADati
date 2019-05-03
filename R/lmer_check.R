@@ -8,7 +8,7 @@
 ## diagnostic plot for lmer objects
 lmer_check <- function( fit, all = TRUE, cex = 1 ) {
   
-  par(ask=!all)
+  if (!all) par(ask=TRUE)
 
   ## dati per i grafici 
   # inutili ma se non li metto dice "no visible binding"
@@ -36,7 +36,7 @@ lmer_check <- function( fit, all = TRUE, cex = 1 ) {
   
   P4 <- ggplot( fit, aes(.hat,.stdresid,colour=.cooksd))+
     geom_smooth(se=FALSE,lty=2)+
-    geom_point(size=cex)+
+    geom_point(size=.cooksd*cex*5)+
     xlab("Leverage")+ylab("Standardized residuals")+ggtitle("Residuals vs Leverage")+
     theme(plot.title =element_text(hjust=.5),legend.position = "bottom",
           legend.box.spacing = unit(.01,"cm"), #legend.key.size = unit(.5, "cm"),
@@ -46,10 +46,11 @@ lmer_check <- function( fit, all = TRUE, cex = 1 ) {
   
   PLOT <- list(P1,P2,P3,P4)
   for (j in 1:length(PLOT)) print(PLOT[[j]])
-  return(PLOT)
+  if (all) return(PLOT)
 }
 
 #'@example 
 #'lmer_check( fit, cex = 2 )
+#'lmer_check( fit, all = FALSE )
 #'
 #'
