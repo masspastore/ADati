@@ -6,7 +6,7 @@
 Produce i grafici per le diagnostiche di un mixed model.
 }
 \usage{
-lmer_check( fit, all = TRUE, cex = 1 )
+lmer_check( fit, all = FALSE, cex = 1 )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -35,7 +35,7 @@ I grafici sono gli stessi che si ottengono con il comando \code{plot()} a partir
 
 ## per ottenere un grafico unico
 # require(cowplot)
-# PLOTS <- lmer_check(fit)
+# PLOTS <- lmer_check(fit, TRUE)
 # cowplot::plot_grid( plotlist = PLOTS )
 
 }

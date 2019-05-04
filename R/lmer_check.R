@@ -6,10 +6,8 @@
 #' all <- TRUE
 #' cex <- 1
 ## diagnostic plot for lmer objects
-lmer_check <- function( fit, all = TRUE, cex = 1 ) {
+lmer_check <- function( fit, all = FALSE, cex = 1 ) {
   
-  if (!all) par(ask=TRUE)
-
   ## dati per i grafici 
   # inutili ma se non li metto dice "no visible binding"
   .stdresid <- c(scale(residuals(fit)))
@@ -45,12 +43,19 @@ lmer_check <- function( fit, all = TRUE, cex = 1 ) {
     scale_color_continuous("Cook's Distance",low = "#4D4D4D", high = "#ff0000")#, range=c(1,5))
   
   PLOT <- list(P1,P2,P3,P4)
-  for (j in 1:length(PLOT)) print(PLOT[[j]])
-  if (all) return(PLOT)
+  
+  if (all) {
+    par(ask=FALSE)
+    return(PLOT)
+  } else {
+    par(ask=TRUE)
+    for (j in 1:length(PLOT)) print(PLOT[[j]])  
+  }
 }
 
 #'@example 
 #'lmer_check( fit, cex = 2 )
-#'lmer_check( fit, all = FALSE )
-#'
+#'lmer_check( fit, all = TRUE )
+#'PLOTS <- lmer_check(fit,TRUE)
+#'cowplot::plot_grid( plotlist = PLOTS )
 #'
