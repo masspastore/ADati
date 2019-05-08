@@ -2,17 +2,21 @@
 #' library( ggplot2 )
 #' library( lme4 )
 #' data(sherifdat, package="ADati")
-#' fit <- lmer(y~time+(1|group),data=sherifdat)
+#' fit <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
 #' all <- TRUE
 #' cex <- 1
 ## diagnostic plot for lmer objects
 lmer_check <- function( fit, all = FALSE, cex = 1 ) {
   
+  #n <- nrow(fit@frame)
+  #k <- length(fixef(fit))+sum(unlist(lapply(ranef(fit),FUN=function(x){dim(x)[2]})))
+
   ## dati per i grafici 
   # inutili ma se non li metto dice "no visible binding"
   .stdresid <- c(scale(residuals(fit)))
   .hat <- hatvalues(fit)
   .cooksd <- cooks.distance( fit )
+  zcooksd <- .cooksd/max(.cooksd)#+cex*1.2
   .fitted <- fitted(fit)
   .resid <- resid(fit)
   ###########################################
@@ -34,7 +38,7 @@ lmer_check <- function( fit, all = FALSE, cex = 1 ) {
   
   P4 <- ggplot( fit, aes(.hat,.stdresid,colour=.cooksd))+
     geom_smooth(se=FALSE,lty=2)+
-    geom_point(size=.cooksd*cex*5)+
+    geom_point(size=cex+zcooksd)+
     xlab("Leverage")+ylab("Standardized residuals")+ggtitle("Residuals vs Leverage")+
     theme(plot.title =element_text(hjust=.5),legend.position = "bottom",
           legend.box.spacing = unit(.01,"cm"), #legend.key.size = unit(.5, "cm"),
@@ -50,11 +54,12 @@ lmer_check <- function( fit, all = FALSE, cex = 1 ) {
   } else {
     par(ask=TRUE)
     for (j in 1:length(PLOT)) print(PLOT[[j]])  
+    par(ask=FALSE)
   }
 }
 
 #'@example 
-#'lmer_check( fit, cex = 2 )
+#'lmer_check( fit, cex = 1 )
 #'lmer_check( fit, all = TRUE )
 #'PLOTS <- lmer_check(fit,TRUE)
 #'cowplot::plot_grid( plotlist = PLOTS )
