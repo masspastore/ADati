@@ -39,4 +39,4 @@ I grafici sono gli stessi che si ottengono con il comando \code{plot()} a partir
 # cowplot::plot_grid( plotlist = PLOTS )
 
 }
-\keyword{htest}
+\keyword{utility}

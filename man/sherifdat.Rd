@@ -30,7 +30,7 @@ https://brocku.ca/MeadProject/Sherif/Sherif_1935a/Sherif_1935a_3.html
 \references{
 Lang, J. W. B., & Bliese, P. D. (2017). A temporal perspective on emergence: Using 3-level mixed effects models to track consensus emergence in groups. \emph{Handbook of Multilevel Theory, Measurement, and Analysis}. Washington, DC: American Psychological Association.
 }
-\note{Lo stesso data frame \`e disponibile nel pacchetto \code{multilevel}.}
+\note{Lo stesso data frame è disponibile nel pacchetto \code{multilevel}.}
 
 \keyword{data}
 %\eof

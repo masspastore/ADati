@@ -35,7 +35,7 @@ hist( Y$hatY )
  
 # modello con due predittori
 fit <- lm(voti~ore+anno, data = studenti)
-Y <- model.predictions( fit )
+Y <- model.predictions( fit, 100 )
 par( mfrow=c(1,3))
 for (j in levels(Y$anno)) plot( hatY ~ ore, data = subset(Y,anno==j))
  

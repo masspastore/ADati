@@ -1,3 +1,9 @@
+  CHANGES IN ADati VERSION 5.4
+
+CHANGES
+  * aggiunta funzione akaike_weights
+  * aggiunta funzione grafica plot_relative_evidence
+   
   CHANGES IN ADati VERSION 5.3
 
 CHANGES
