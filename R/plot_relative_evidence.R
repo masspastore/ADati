@@ -1,10 +1,18 @@
 #######################################################
 #' @title Grafico evidenza relativa
 #' @param weights = vettore contenente AIC-weights (preferibile che names siano i nomi modelli)
-plot_relative_evidence <- function(weights,log=TRUE,textsize=12,angle=0,return_table=FALSE) {
+plot_relative_evidence <- function(weights,labels=NULL,log=TRUE,textsize=12,angle=0,return_table=FALSE) {
   
   X1 <- X2 <- value <- NA
-  if (is.null(names(weights))) names(weights) <- paste("Model",1:length(weights))
+  
+  if (is.null(names(weights))) {
+    if (is.null(labels)) {
+      names(weights) <- paste("Model",1:length(weights))  
+    } else {
+      names(weights) <- labels
+    }
+  } 
+
   w <- weights
   RR <- matrix(NA,length(w),length(w))
   for (i in 1:length(w)) {
