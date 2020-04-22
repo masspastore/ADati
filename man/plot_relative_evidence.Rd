@@ -6,12 +6,13 @@
 Produce la matrice grafica con le evidenze relative a coppie di un set di modelli.
 }
 \usage{
-plot_relative_evidence( weights, log = TRUE, textsize = 12, angle = 0, 
-               return_table = FALSE )
+plot_relative_evidence( weights, labels = NULL, log = TRUE, 
+          textsize = 12, angle = 0, return_table = FALSE )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{weights}{vettore con gli Akaike Weights, meglio se gli elementi del vettore hanno i nomi dei modelli (vedi esempio).}
+  \item{labels}{vettore (opzionale) con i nomi dei modelli da cui sono stati ricavati i weights.}
   \item{log}{logico, se posto a \code{TRUE} (il default) calcola i logaritmi delle evidenze relative.}
   \item{textsize}{dimensione del testo.}
   \item{angle}{valore numerico, indica l'angolo delle etichette sulla matrice grafica.}
@@ -50,10 +51,6 @@ m3 <- lm(kid_score ~ mom_iq + mom_hs, data = kidiq)
 m4 <- lm(kid_score ~ mom_iq * mom_hs, data = kidiq)
 TAB <- AIC(m0,m1,m2,m3,m4)
 weights <- akaike_weights(TAB[,"AIC"])$w
-plot_relative_evidence(weights)
-
-## assegno i nomi 
-names(weights) <- rownames(TAB)
-plot_relative_evidence(weights)
+plot_relative_evidence(weights, labels = c("m0","m1","m2","m3","m4"))
 }
 \keyword{utility}

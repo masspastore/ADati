@@ -17,7 +17,7 @@ Package: \tab ADati\cr
 Type: \tab Package\cr
 Version: \tab 5.4\cr
 Suggests: \tab MASS, gtools\cr
-Date: \tab 2020-04-18\cr
+Date: \tab 2020-04-22\cr
 License: \tab GPL-2\cr
 Encoding: \tab UTF-8\cr
 }
