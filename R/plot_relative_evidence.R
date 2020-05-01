@@ -1,3 +1,14 @@
+#rm(list=ls())
+#load("~/MEGAsync/lavori/nocentini/meta/data/R02_brmsfit_EN_sc1.rda")
+#BBfit <- subset(Bfit,greaterthannull)
+#BBfit <- BBfit[order(BBfit$weight,decreasing = TRUE),]
+
+#weights <- BBfit$weight
+#labels <- rownames(BBfit) #NULL #
+#log <- FALSE
+#textsize <- 12
+#angle <- 0
+#return_table <- FALSE
 #######################################################
 #' @title Grafico evidenza relativa
 #' @param weights = vettore contenente AIC-weights (preferibile che names siano i nomi modelli)
@@ -31,6 +42,12 @@ plot_relative_evidence <- function(weights,labels=NULL,log=TRUE,textsize=12,angl
   rownames(RR) <- colnames(RR) <- names(weights)
   RRplot <- reshape::melt(RR)
   colnames(RRplot)[1:2] <- c("X1","X2")
+  RRplot$X2 <- factor(RRplot$X2, levels = names(weights)[length(weights):1], ordered = TRUE)
+  RRplot$X1 <- factor(RRplot$X1, levels = names(weights)[length(weights):1], ordered = TRUE)
+  
+  if ((!log)&(max(RRplot$value)>1e+150))
+    stop("Valori di evidenza relativa troppo elevati; \ngrafico possibile solo su scala log.") 
+  
   print(ggplot(RRplot,aes(X2,X1,fill=value))+geom_tile()+
           scale_fill_gradient2(low = "blue", high = "red", mid = "white",midpoint =MIDPOINT, space = "Lab",name=NAME)+
           xlab("")+ylab("")+coord_fixed()+
@@ -39,3 +56,6 @@ plot_relative_evidence <- function(weights,labels=NULL,log=TRUE,textsize=12,angl
   
   if (return_table) return(RR)
 }
+
+#plot_relative_evidence(BBfit$weight)
+#plot_relative_evidence(BBfit$weight, labels = rownames(BBfit))

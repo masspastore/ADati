@@ -1,3 +1,10 @@
+  CHANGES IN ADati VERSION 5.4.1
+
+CHANGES
+  * modifiche alla funzione plot_relative_evidence 
+    - per ordinare la matrice di output
+    - messaggio di errore quando i valori di evidenza relativa sono troppo elevati (> 1e+150)
+   
   CHANGES IN ADati VERSION 5.4
 
 CHANGES
