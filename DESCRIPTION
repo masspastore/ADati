@@ -7,7 +7,7 @@ Author: Massimiliano Pastore
 Maintainer: Massimiliano Pastore <massimiliano.pastore@unipd.it>
 Imports: ggplot2, lavaan, reshape
 Suggests: gtools, MASS
-Description: Contiene una miscellanea di funzioni e dati di supporto al manuale 'Analisi dei dati in Psicologia', Pastore M., Il Mulino, 2015.
+Description: Pacchetto di supporto al manuale 'Analisi dei dati in Psicologia', Pastore M., Il Mulino, 2015.
 URL: http://147.162.146.188/~pastore/Ilmulino.html
 Encoding: UTF-8
 Namespace: auto
