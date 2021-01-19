@@ -3,7 +3,6 @@ citHeader("Please cite as:")
 citEntry(entry = "Manual",
   title        = "Miscellanea di funzioni e dati di supporto al manuale 'Analisi dei dati in Psicologia', Pastore M., Il Mulino, 2015.",
   author       = "Massimiliano Pastore",
-  journal      = "Frontiers in Psychology",
   year         = "2020",
   note         = "R package version 5.4.1",
   url          = "https://github.com/masspastore/ADati",
