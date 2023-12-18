@@ -4,13 +4,13 @@ citEntry(entry = "Manual",
   title        = "Miscellanea di funzioni e dati di supporto al manuale 'Analisi dei dati in Psicologia', Pastore M., Il Mulino, 2015.",
   author       = "Massimiliano Pastore",
   year         = "2020",
-  note         = "R package version 5.4.1",
+  note         = "R package version 5.4.4",
   url          = "https://github.com/masspastore/ADati",
 
   textVersion  =
   paste("Pastore, M. (2020).",
         "Miscellanea di funzioni e dati di supporto al manuale 'Analisi dei dati in Psicologia', Pastore M., Il Mulino, 2015.",
-        " R package version 5.4.1",
+        " R package version 5.4.4",
         "URL https://github.com/masspastore/ADati")
 )
 
@@ -20,7 +20,7 @@ citEntry(entry = "Book",
   author       = "Massimiliano Pastore",
   publisher    = "Il Mulino, Bologna",
   year         = "2015",
-  url          = "https://mulino.it/isbn/9788815258984#",
+  url          = "https://mulino.it/isbn/9788815258984",
 
   textVersion  =
   paste("Pastore, M. (2015).",
