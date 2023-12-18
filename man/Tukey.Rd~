@@ -1,0 +1,46 @@
+\name{Tukey}
+\alias{Tukey}
+%- Also NEED an '\alias' for EACH other topic documented here.
+\title{Test di Tukey}
+\description{
+Esegue dei confronti a coppie tra medie utilizzando la correzione di Tukey.
+}
+\usage{
+Tukey(x, n, MSerr, MSdf, xlab = NA)
+}
+%- maybe also 'usage' for other objects documented here.
+\arguments{
+  \item{x}{vettore delle medie.}
+  \item{n}{vettore delle numerosita' campionarie. Se le numerosita' sono tutte uguali e' possibile
+inserire un solo valore, se sono diverse, \code{n} e' calcolato automaticamente come media armonica delle numerosità.}
+  \item{MSerr}{varianza dell'errore ottenuta con l'ANOVA.}
+  \item{MSdf}{gradi di liberta' della varianza d'errore.}
+  \item{xlab}{etichette per le medie (opzionale)}
+}
+\details{
+Calcola tutte le differenze studentizzate a coppie tra le medie, 
+e poi, utilizzando la funzione \code{ptukey} produce le probabilita' associate ai confronti.
+}
+\value{
+  \item{$Tukey.test}{Matrice con p righe (p e' il numero di confronti a coppie) e 2 colonne (la prima 
+  contiene le differenze studentizzate, \code{q}, la seconda le probabilita' associate, \code{pval}) }
+}
+\references{
+Tukey, J.W. (1953). \emph{The problem of multiple comparisons}. Princeton University, Princeton, NJ.
+
+Keppel, G. (1991). \emph{Design and analysis}. Prentice Hall, London.}
+\author{Massimiliano Pastore}
+%\note{ ~~further notes~~ 
+%
+% ~Make other sections like Warning with \section{Warning }{....} ~
+%}
+%\seealso{ ~~objects to See Also as \code{\link{help}}, ~~~ }
+\examples{
+medie <- c(26.50,37.75,57.50,61.75) # medie osservate
+MSerr <- 150.4583 # ricavata dall'ANOVA
+Tukey(medie,4,MSerr,12,c(4,12,20,28))
+
+# esempio con numerosita' diverse
+Tukey(c(26.50,37.75,57.50,61.75),c(7,5,4,4),150.4583,12,c(4,12,20,28))
+}
+\keyword{htest}

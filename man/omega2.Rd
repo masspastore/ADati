@@ -1,0 +1,42 @@
+\name{omega2}
+\alias{omega2}
+%- Also NEED an '\alias' for EACH other topic documented here.
+\title{Omega quadro}
+\description{
+Calcola Omega quadro a partire da F nell'Anova ad un fattore tra
+soggetti.
+}
+\usage{
+omega2( Fcal, k, n )
+}
+%- maybe also 'usage' for other objects documented here.
+\arguments{
+  \item{Fcal}{valore di F ottenuto dall'ANOVA.}
+  \item{k}{numero di gruppi.}
+  \item{n}{numero di soggetti per gruppo.}
+}
+%\details{
+%Utilizzabile solo per l'Anova ad un fattore tra soggetti. Se il numero di soggetti nei \code{k} gruppi
+%non e' lo stesso, al posto di \code{n} va inserita la media armonica delle numerosita'.
+%}
+\value{
+Restituisce il valore di Omega quadro.
+}
+\references{
+Howell, D.C. (1997). \emph{Statistical Methods for Psychology}. Duxbury Press, Belmont, CA.
+
+Keppel, G. (1991). \emph{Design and analysis}. Prentice Hall, London.
+}
+\author{Massimiliano Pastore}
+\note{Utilizzabile solo per l'Anova ad un fattore tra soggetti. Se il numero di soggetti nei \code{k} gruppi
+non e' lo stesso, al posto di \code{n} va inserita la media armonica delle numerosita'.}
+%\seealso{ ~~objects to See Also as \code{\link{help}}, ~~~ }
+\examples{
+omega2(7.3426,4,4)
+
+## numerosita' diverse nei gruppi
+n <- c(5,7,6,5)
+n2 <- length(n)/sum(1/n) # calcolo la media armonica
+omega2(7.3426,4,n2)
+}
+\keyword{htest}

@@ -1,0 +1,49 @@
+\name{partial.eta2}
+\alias{partial.eta2}
+%- Also NEED an '\alias' for EACH other topic documented here.
+\title{Eta quadro parziale}
+\description{
+Eta quadro parziale per ANOVA.
+}
+\usage{
+partial.eta2(SS.eff,SS.err,eff.lab=NULL)
+}
+%- maybe also 'usage' for other objects documented here.
+\arguments{
+  \item{SS.eff}{vettore con le devianze (SS) degli effetti (ricavate dall'ANOVA).}
+  \item{SS.err}{devianza dell'errore (ricavata dall'ANOVA).}
+  \item{eff.lab}{etichette degli effetti (opzionale).}
+}
+%\details{
+%Utilizzabile solo per Anova ad uno o più fattori tra soggetti.  
+%}
+\value{
+Restituisce gli Eta quadri parziali per tutti gli effetti inseriti.
+}
+\references{
+Howell, D.C. (1997). \emph{Statistical Methods for Psychology}. Duxbury Press, Belmont, CA.
+
+Tabachnick, B.G., Fidell, L.S. (1996). \emph{Using multivariate statistics}. Harper Collins, NY.
+}
+\author{Massimiliano Pastore}
+%\note{Utilizzabile solo per Anova ad uno o più fattori tra soggetti.}
+%\seealso{ ~~objects to See Also as \code{\link{help}}, ~~~ }
+\examples{
+### between ANOVA
+data(monkeys)
+anova(lm(score~drug*fdep,data=monkeys))
+### ricavo i dati dall'output dell'ANOVA
+partial.eta2(c(112,24,144),330,c("d","f","d*f"))
+
+### within ANOVA
+data(tmt)
+attach(tmt)
+S <- factor(rep(subj,3))
+A <- factor(sort(rep(1:3,nrow(tmt))))
+tmtB <- c(tmtB1,tmtB2,tmtB3)
+detach(tmt)
+summary(aov(tmtB~A+Error(S/A)))
+### ricavo i dati dall'output dell'ANOVA
+partial.eta2(49155,67652,"A")
+}
+\keyword{htest}

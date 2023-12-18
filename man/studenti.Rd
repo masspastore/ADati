@@ -1,0 +1,29 @@
+% --- Source file: studenti.Rd --- 
+\name{studenti} 
+\alias{studenti} 
+\title{Data set fittizio} 
+\description{ 
+Data set 
+fittizio: matrice con 58 soggetti studenti. 
+} 
+
+\usage{data( studenti )} 
+
+\format{
+Il data frame contiene le seguenti variabili:
+    \itemize{
+    \item \code{matricola}: num, matricola dello studente.
+    \item \code{cognome}: Factor, cognome dello studente.
+    \item \code{nome}: Factor, nome dello studente.
+    \item \code{genere}: Factor, genere dello studente.
+    \item \code{fac}: Factor, facolta' di appartenenza dello studente.
+    \item \code{anno}: Factor, anno di corso. 
+    \item \code{eta}: num, eta' dello studente in anni compiuti.
+    \item \code{d1, d2, d3, d4}: num, punteggi di risposta a quattro domande di un test.
+    \item \code{memo}: num, punteggi ottenuti in un test di memoria.
+    \item \code{ore}: num, ore di frequenza ad un corso universitario.
+    \item \code{voti}: num, voto ottenuto all'esame finale del corso.}
+}
+
+\author{Massimiliano Pastore}
+\keyword{data}

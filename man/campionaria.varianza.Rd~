@@ -1,0 +1,50 @@
+\name{campionaria.varianza}
+\alias{campionaria.varianza}
+%- Also NEED an '\alias' for EACH other topic documented here.
+\title{Distribuzione campionaria della varianza}
+\description{
+Produce la distribuzione campionaria della varianza.
+}
+\usage{
+campionaria.varianza(Omega, n = 2, replace = FALSE, exact = FALSE, 
+                                        grafico = TRUE, B = 1000)
+}
+%- maybe also 'usagè for other objects documented here.
+\arguments{
+  \item{Omega}{vettore numerico, contiene i valori della popolazione.}
+  \item{n}{numerosità campionaria.}
+  \item{replace}{logico, indica se i campioni sono con reinserimento (\code{TRUE}) oppure senza reinserimento (\code{FALSE}).}
+  \item{exact}{logico, indica se creare tutti i campioni possibili (\code{TRUE}) oppure solo un numero \code{B} di campioni estratti casualmente 
+      (\code{FALSE}).}
+  \item{grafico}{logico, indica se produrre il grafico (\code{TRUE}) oppure no (\code{FALSE}).}
+  \item{B}{numero di campioni casuali da estrarre se \code{exact=FALSE}.}
+}
+\details{
+Richiede la funzione \code{permutations} del pacchetto \code{gtools}.
+
+ATTENZIONE: dato che il numero di campioni possibili aumenta con l'aumento della dimensione di \code{Omega}, quando gli elementi di \code{Omega}
+sono più di 30 non è possibile utilizzare tutti i campioni possibili.
+
+Stampa una tabella con i valori della popolazione e le statistiche della distribuzione campionaria.
+}
+\value{
+Restituisce una lista con i seguenti elementi:
+  \item{$Omega}{i valori della popolazione.}
+  \item{$Ss2x}{distribuzione campionaria della varianza.}
+}
+
+\author{Massimiliano Pastore}
+
+\examples{
+## dati uniformi
+require(gtools)
+campionaria.varianza(0:3,exact=TRUE,replace=TRUE) # con reinserimento
+campionaria.varianza(0:3,exact=TRUE) # senza reinserimento
+
+## dati normali
+campionaria.varianza(rnorm(50),n=8)
+
+## dati non normali
+campionaria.varianza(rchisq(50,1),n=8)
+}
+\keyword{htest}

@@ -1,0 +1,58 @@
+\name{Scheffe}
+\alias{Scheffe}
+%- Also NEED an '\alias' for EACH other topic documented here.
+\title{Test di Scheffe'}
+\description{
+Esegue dei confronti multipli tra medie utilizzando la correzione di Scheffe'.
+}
+\usage{
+Scheffe( mx, n, MSerr, w = NULL )
+}
+%- maybe also 'usage' for other objects documented here.
+\arguments{
+  \item{mx}{vettore delle medie.}
+  \item{n}{vettore delle numerosita' campionarie. Se le numerosita' sono tutte uguali e' possibile
+inserire un solo valore, se sono diverse, \code{n} e' calcolato automaticamente come media armonica delle numerosita'.}
+  \item{MSerr}{varianza dell'errore ottenuta con l'ANOVA.}
+  \item{w}{matrice dei pesi per i contrasti (opzionale), per default esegue tutti i confronti a coppie. Deve
+avere tante righe quanti sono i contrasti da eseguire e tante colonne quante sono le medie.}
+}
+\value{
+Restistuisce una lista di tre oggetti:
+  \item{$medie}{medie inserite in input.}
+  \item{$prob}{probabilita' aggiustate dei confronti effettuati.}
+  \item{$w}{matrice dei pesi.}
+}
+\references{
+Scheffe', H. (1953). A method for judging all contrasts in the analysis of variance. \emph{Biometrika}, 40, 87-104.
+
+Keppel, G. (1991). \emph{Design and analysis}. Prentice Hall, London.}
+\author{Massimiliano Pastore}
+%\note{ ~~further notes~~ 
+%
+% ~Make other sections like Warning with \section{Warning }{....} ~
+%}
+%\seealso{ ~~objects to See Also as \code{\link{help}}, ~~~ }
+\examples{
+medie <- c(26.50,37.75,57.50,61.75) # medie osservate
+MSerr <- 150.4583 # ricavata dall'ANOVA
+# esegue tutti i confronti a coppie
+Scheffe(medie,4,MSerr) 
+
+# esempio con solo due contrasti
+W <- matrix(c(1,-1,0,0,1,1,-2,0),ncol=4,byrow=TRUE)
+Scheffe(medie,4,MSerr,W)
+
+# esempio con numerosita' diverse
+Scheffe(c(26.50,37.75,57.50,61.75),c(7,5,4,4),150.4583)
+
+## 
+data(relbambini,package="ADati")
+mx <- tapply(relbambini$comp.ling,relbambini$cat.comp,mean)
+n <- tapply(relbambini$comp.ling,relbambini$cat.comp,length)
+
+summary(aov(comp.ling~cat.comp,data=relbambini)) # ricavo MSerr
+
+Scheffe(mx,n,18.05)
+}
+\keyword{htest}
