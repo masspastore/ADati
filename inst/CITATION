@@ -1,0 +1,31 @@
+citHeader("Please cite as:")
+
+citEntry(entry = "Manual",
+  title        = "Miscellanea di funzioni e dati di supporto al manuale 'Analisi dei dati in Psicologia', Pastore M., Il Mulino, 2015.",
+  author       = "Massimiliano Pastore",
+  year         = "2020",
+  note         = "R package version 5.4.1",
+  url          = "https://github.com/masspastore/ADati",
+
+  textVersion  =
+  paste("Pastore, M. (2020).",
+        "Miscellanea di funzioni e dati di supporto al manuale 'Analisi dei dati in Psicologia', Pastore M., Il Mulino, 2015.",
+        " R package version 5.4.1",
+        "URL https://github.com/masspastore/ADati")
+)
+
+
+citEntry(entry = "Book",
+  title        = "Analisi dei dati in Psicologia",
+  author       = "Massimiliano Pastore",
+  publisher    = "Il Mulino, Bologna",
+  year         = "2015",
+  url          = "https://mulino.it/isbn/9788815258984#",
+
+  textVersion  =
+  paste("Pastore, M. (2015).",
+        "Analisi dei dati in Psicologia.",
+        "Il Mulino, Bologna",
+        "URL https://mulino.it/isbn/9788815258984#")
+)
+
