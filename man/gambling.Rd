@@ -5,7 +5,7 @@
 \title{Data set}
 
 \description{
-Data set adattato da Canale & al. 2016: Dati di una ricerca sulle attitudini al gioco d'azzardo in un campione di 1221 adolescenti. 
+Adattato da Canale & al. 2016: Dati di una ricerca sulle attitudini al gioco d'azzardo in un campione di 1221 adolescenti. 
 }
 
 \usage{
@@ -27,7 +27,7 @@ Il data frame contiene le seguenti variabili:
     \item \code{par_know}: num, percezione del controllo parentale.
     }
 }
-\source{Canale, N., Vieno, A. ter Bogt, T., Pastore, M., Siciliano, V., Molinaro, S. (2016). Adolescent gambling-oriented attitudes mediate the relantionship between parental knowledge and adolescent gambling: Implications for prevention. \emph{Prevention Science}, 17, 970-980.}
+\references{Canale, N., Vieno, A. ter Bogt, T., Pastore, M., Siciliano, V., Molinaro, S. (2016). Adolescent gambling-oriented attitudes mediate the relantionship between parental knowledge and adolescent gambling: Implications for prevention. \emph{Prevention Science}, 17, 970-980.}
 \author{Massimiliano Pastore}
 %}
 \keyword{data}

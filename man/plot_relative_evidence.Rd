@@ -7,7 +7,8 @@ Produce la matrice grafica con le evidenze relative a coppie di un set di modell
 }
 \usage{
 plot_relative_evidence( weights, labels = NULL, log = TRUE, 
-          textsize = 12, angle = 0, return_table = FALSE )
+          textsize = 12, angle = 0, U = c(0,0,0,0), 
+          return_table = FALSE, short.names = FALSE )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -16,7 +17,10 @@ plot_relative_evidence( weights, labels = NULL, log = TRUE,
   \item{log}{logico, se posto a \code{TRUE} (il default) calcola i logaritmi delle evidenze relative.}
   \item{textsize}{dimensione del testo.}
   \item{angle}{valore numerico, indica l'angolo delle etichette sulla matrice grafica.}
+  \item{U}{vettore numerico, indica i margini (superiore, destro, inferiore e sinistro) della figura in cm.}
   \item{return_table}{logico, se posto a \code{TRUE} restituisce la tabella, contenente le informazioni rappresentate nel grafico.}
+  \item{short.names}{logico, se posto a \code{TRUE} modifica i nomi delle colonne della tabella. Da usarsi per rendere più leggibile la tabella.}
+
 }
 %\details{
 %Richiede il pacchetto \code{reshape}.

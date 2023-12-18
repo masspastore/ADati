@@ -22,7 +22,7 @@ Il data frame contiene le seguenti variabili:
     \item \code{presreal}: num, punteggio di prestigio reale. 
     }
 }
-\source{Kluegel, J. R., Singleton Jr, R., & Starnes, C. E. (1977). Subjective class identification: A multiple indicator approach. \emph{American Sociological Review}, 599-611.}
+\references{Kluegel, J. R., Singleton Jr, R., & Starnes, C. E. (1977). Subjective class identification: A multiple indicator approach. \emph{American Sociological Review}, 599-611.}
 \author{Massimiliano Pastore}
 %}
 \keyword{data}
