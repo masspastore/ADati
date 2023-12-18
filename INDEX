@@ -1,0 +1,14 @@
+adjP                                 Aggiustamento delle probabilità per confronti multipli
+area.triangolo                       Area del triangolo
+CI.mean                              Intervallo di confidenza per la media
+cor.test.F 			     Fisher correlation test
+cramer.phi                           PHI di Cramer
+maggiore.2                           Maggiore tra due numeri
+maggiore.n                           Maggiore tra n numeri
+multi.kappa                          Kappa di Cohen
+negativo                             Trova il primo valore negativo
+omega2                               Omega quadro
+partial.omega2                       Omega quadro parziale
+Scheffe                              Test di Scheffé
+Tukey                                Test di Tukey
+Welch                                Test di Welch

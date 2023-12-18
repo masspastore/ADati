@@ -1,0 +1,16 @@
+Package: ADati
+Type: Package
+Title: Analisi dei dati in Psicologia
+Version: 5.4.2
+Date: 2021-11-06
+Author: Massimiliano Pastore
+Maintainer: Massimiliano Pastore <massimiliano.pastore@unipd.it>
+Depends: R (>= 3.5.0)
+Imports: ggplot2, lavaan, reshape
+Suggests: gtools, MASS
+Description: Pacchetto di supporto al manuale 'Analisi dei dati in Psicologia', Pastore M., Il Mulino, 2015.
+URL: http://147.162.146.188/~pastore/Ilmulino.html
+Encoding: UTF-8
+Namespace: auto
+License: GPL-2
+

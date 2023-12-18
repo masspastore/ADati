@@ -1,0 +1,8 @@
+exportPattern("^[[:alpha:]]+")
+import(ggplot2,lavaan,reshape)
+importFrom("graphics", "abline", "curve", "hist", "par", "layout")
+importFrom("stats","BIC","formula","density", "dnorm","simulate", 
+           "na.omit", "var","cor","qt", "sd", "pnorm","cooks.distance",
+          "hatvalues", "pf", "rbinom", "rcauchy", "rchisq", "rexp",
+          "rgamma", "rnorm", "rpois", "rt", "runif","ptukey","lm")
+importFrom("utils", "stack")

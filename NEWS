@@ -1,0 +1,87 @@
+  CHANGES IN ADati VERSION 5.4.2
+
+CHANGES
+  * aggiunto i seguenti dataset:
+    earlymath, ESdata, gambling, kluegel
+  * aggiornato dataset Bullying
+   
+  CHANGES IN ADati VERSION 5.4.1
+
+CHANGES
+  * modifiche alla funzione plot_relative_evidence 
+    - per ordinare la matrice di output
+    - messaggio di errore quando i valori di evidenza relativa sono troppo elevati (> 1e+150)
+   
+  CHANGES IN ADati VERSION 5.4
+
+CHANGES
+  * aggiunta funzione akaike_weights
+  * aggiunta funzione grafica plot_relative_evidence
+   
+  CHANGES IN ADati VERSION 5.3
+
+CHANGES
+  * modificata funzione lmer_check()
+  * aggiornate le funzioni moda() e approxBF()
+
+  CHANGES IN ADati VERSION 5.2
+
+CHANGES
+  * aggiunta funzione model.predictions()
+
+  CHANGES IN ADati VERSION 5.1
+
+CHANGES
+  * ottimizzate le funzioni di campionamento, tolti i cicli for
+  * organizzato meglio NAMESPACE
+  
+  CHANGES IN ADati VERSION 5.0
+
+CHANGES
+  * aggiunta la funzione lmer_check() per i grafici delle diagnostiche di un oggetto lmer
+  * aggiunto il data frame sherifdat (dal pacchetto multilevel)
+  * modificate le dipendenze del pacchetto: aggiunti i pacchetti ggplot2 e cowplot
+  * corretto errore sulla funzione approxBF
+
+  CHANGES IN ADati VERSION 4.9
+
+CHANGES
+  * modificata la funzione TCD
+
+  CHANGES IN ADati VERSION 4.8
+
+CHANGES
+  * rimessa la dipendenza da lavaan, necessaria per la funzione TCD
+
+  CHANGES IN ADati VERSION 4.7
+
+CHANGES
+  * tolta la dipendenza dal pacchetto lavaan, necessario solo per la funzione TCD
+  * tolta la funzione sem.fitresid, ora disponibile come sem.fitres nel pacchetto influence.SEM
+
+  CHANGES IN ADati VERSION 4.6
+
+CHANGES
+  * aggiunta funzione sem.fitresid
+  * aggiornato le call alle funzioni di pacchetti esterni
+  * aggiornato funzione sdsim
+
+  CHANGES IN ADati VERSION 4.5
+
+CHANGES
+  * modificato data frame memoria
+  * aggiunto data frame kidiq
+
+  CHANGES IN ADati VERSION 4.4
+
+CHANGES
+  * aggiunta funzione TCD
+
+  CHANGES IN ADati VERSION 4.3
+
+CHANGES
+  * aggiunto data set Omega
+  * aggiunta funzione sdsim (adapted by original script of Nicole Radziwill)
+
+
+
