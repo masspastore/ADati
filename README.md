@@ -1,10 +1,10 @@
 # ADati 
 
-Versione 5.4.1, ultimo aggiornamento 01/05/2020.
+Versione 5.5, ultimo aggiornamento 2023-12-12.
 
 Miscellanea di funzioni e dati di supporto al manuale 'Analisi dei dati in Psicologia', Pastore M., Il Mulino, 2015.
 
-URL: http://147.162.146.188/~pastore/Ilmulino.html
+URL: https://lilia.dpss.psy.unipd.it/~massimiliano.pastore/Ilmulino.html
 
 
 # Set up
@@ -12,10 +12,13 @@ URL: http://147.162.146.188/~pastore/Ilmulino.html
 To install this github version type in R:
 
 ```{r}
-#if devtools is not installed yet: 
-#install.packages("devtools") 
-library(devtools)
-install_github("masspastore/ADati")
+# with devtools package
+install.packages("devtools")  # if devtools is not installed yet 
+devtools::install_github( "masspastore/ADati" )
+
+# alternatively use remotes package
+install.packages( "remotes" ) # if remotes is not installed yet
+remotes::install_github( "masspastore/ADati" )
 ```
 
 

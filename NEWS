@@ -1,3 +1,23 @@
+  CHANGES IN ADati VERSION 5.5
+
+CHANGES
+  * aggiunto dataset ecoansia
+  * modificata la funzione plot_relative_evidence con aggiunta parametro U per gestire i margini della figura.
+  * aggiunte funzioni bayes_eta2 e model.predictions.rstanarm
+
+  CHANGES IN ADati VERSION 5.4.4
+
+CHANGES
+  * aggiunto i seguenti dataset: 
+    crimi, gothic, impiegati, inibition, mathschool, OBQ, QOLAD, radon, SNA1, vaes2015, Worland   
+  * modificata la funzione plot_relative_evidence.
+
+  CHANGES IN ADati VERSION 5.4.3
+
+CHANGES
+  * aggiunto dataset attivamente 
+  * modificata la funzione model.predictions: cambiato il nome della colonna del dataframe di output da hatY a simY
+   
   CHANGES IN ADati VERSION 5.4.2
 
 CHANGES
