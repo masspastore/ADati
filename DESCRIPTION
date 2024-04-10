@@ -1,8 +1,8 @@
 Package: ADati
 Type: Package
 Title: Analisi dei dati in Psicologia
-Version: 5.5
-Date: 2023-12-12
+Version: 5.5.1
+Date: 2024-04-10
 Author: Massimiliano Pastore
 Maintainer: Massimiliano Pastore <massimiliano.pastore@unipd.it>
 Depends: R (>= 3.5.0)
