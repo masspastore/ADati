@@ -26,8 +26,7 @@ Restituisce il valore di Eta quadro con relativo errore per ciascun effetto del 
 Se \code{posterior = TRUE} restituisce anche le distribuzioni a posteriori.   
 }
 
-%\references{
-%}  
+\note{Non gestisce (ancora) i dati mancanti. Per avere il calcolo dell'indice si deve adattare il modello su un dataframe senza dati mancanti.}  
 \author{Massimiliano Pastore}
 
 \examples{
