@@ -7,6 +7,7 @@ Produce la matrice grafica con le evidenze relative a coppie di un set di modell
 }
 \usage{
 plot_relative_evidence( weights, labels = NULL, log = TRUE, 
+          ordered = TRUE, 
           textsize = 12, angle = 0, U = c(0,0,0,0), 
           return_table = FALSE, short.names = FALSE )
 }
@@ -15,6 +16,7 @@ plot_relative_evidence( weights, labels = NULL, log = TRUE,
   \item{weights}{vettore con gli Akaike Weights, meglio se gli elementi del vettore hanno i nomi dei modelli (vedi esempio).}
   \item{labels}{vettore (opzionale) con i nomi dei modelli da cui sono stati ricavati i weights.}
   \item{log}{logico, se posto a \code{TRUE} (il default) calcola i logaritmi delle evidenze relative.}
+  \item{ordered}{logico, se posto a \code{TRUE} (il default) ordina i weights.}
   \item{textsize}{dimensione del testo.}
   \item{angle}{valore numerico, indica l'angolo delle etichette sulla matrice grafica.}
   \item{U}{vettore numerico, indica i margini (superiore, destro, inferiore e sinistro) della figura in cm.}
