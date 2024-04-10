@@ -11,7 +11,8 @@
 #######################################################
 #' @title Grafico evidenza relativa
 #' @param weights = vettore contenente AIC-weights (preferibile che names siano i nomi modelli)
-plot_relative_evidence <- function(weights,labels=NULL,log=TRUE,textsize=12,
+plot_relative_evidence <- function(weights,labels=NULL,log=TRUE,
+                ordered = TRUE, textsize=12, 
                 angle=0,U=c(0,0,0,0),return_table=FALSE,
                             short.names=FALSE) {
   
@@ -25,7 +26,12 @@ plot_relative_evidence <- function(weights,labels=NULL,log=TRUE,textsize=12,
     }
   } 
 
-  w <- weights
+  if (ordered) {
+    w <- sort(weights)
+  } else {
+    w <- weights
+  }
+  
   RR <- matrix(NA,length(w),length(w))
   for (i in 1:length(w)) {
     for (j in 1:length(w)) {
