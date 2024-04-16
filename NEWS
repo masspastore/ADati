@@ -1,7 +1,7 @@
   CHANGES IN ADati VERSION 5.5.1
 
 CHANGES
-  * aggiunto avviso di errore sulla funzione bayes_eta2(); non gestisce ancora modelli con dati mancanti. Da fare. 
+  * aggiunta gestione dati mancanti sulla funzione bayes_eta2(). 
   * aggiunto ordinamento nella funzione plot_relative_evidence
   
   CHANGES IN ADati VERSION 5.5

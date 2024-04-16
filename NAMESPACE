@@ -5,5 +5,5 @@ importFrom("stats","BIC","formula","density", "dnorm","simulate",
            "na.omit", "var","cor","qt", "sd", "pnorm","cooks.distance",
           "hatvalues", "pf", "rbinom", "rcauchy", "rchisq", "rexp",
           "rgamma", "rnorm", "rpois", "rt", "runif","ptukey","lm",
-          "median","mad")
+          "median","mad","terms")
 importFrom("utils", "stack")
