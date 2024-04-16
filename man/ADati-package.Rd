@@ -15,10 +15,10 @@ NOTA: Alcune funzioni richiedono il pacchetto \code{gtools} e il pacchetto \code
 \tabular{ll}{
 Package: \tab ADati\cr
 Type: \tab Package\cr
-Version: \tab 5.5\cr
+Version: \tab 5.5.1\cr
 Depends: \tab R (>= 3.5.0)\cr
 Suggests: \tab MASS, gtools, rstanarm, brms\cr
-Date: \tab 2023-12-12\cr
+Date: \tab 2024-04-15\cr
 License: \tab GPL-2\cr
 Encoding: \tab UTF-8\cr
 }
