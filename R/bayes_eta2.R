@@ -3,17 +3,18 @@
 #partial <- FALSE
 #posterior <- FALSE
 
+#ESdata$ChildBeh[1] <- NA
+
 #X <- foreign::read.spss( "~/MEGAsync/didattica/ADsvil2324/lezioni/data/auto.sav",
 #                         to.data.frame = TRUE)
 #fit <- rstanarm::stan_glm( consumo ~ peso, data = X, refresh = 0 )
-#
 #fit <- rstanarm::stan_glm( ChildBeh ~ ParSty * HighSens, 
 #                           data = ESdata, chains = 1 ) 
 #fit <- rstanarm::stan_glm( ChildBeh ~ 1, 
 #                           data = ESdata, chains = 1 ) 
 #fit <- rstanarm::stan_glm( ChildBeh ~ ParSty, 
 #                           data = ESdata, chains = 1 ) 
-#fit <- brms::brm( ChildBeh ~ ParSty, # + HighSens, 
+#fit <- brms::brm( ChildBeh ~ ParSty*HighSens, 
 #                           data = ESdata, chains = 1 ) 
 
 #' @name bayes_eta2
@@ -30,29 +31,22 @@ bayes_eta2 <- function(fit, partial = FALSE,
   if (package[1] == "rstanarm") {
     coef.names <- names(rstanarm::fixef(fit))
     npred <- length(rstanarm::fixef(fit))
-    FORMULA <- paste(as.character(formula(fit))[c(2, 1, 
-                                                  3)], collapse = " ")
-  }
-  else {
+    FORMULA <- formula(fit)
+  } else {
     coef.names <- rownames(brms::fixef(fit))
     npred <- nrow(brms::fixef(fit))
-    FORMULA <- as.character(formula(fit))[1]
-  }
-  PREDS <- strsplit(FORMULA, split = "~")[[1]][2]
-  FORMULA <- paste0("y ~", PREDS)
-  
-  Z <- fit$data
-  NA.count <- apply(Z,2,function(x){sum(is.na(x))})
-  
-  if (sum(NA.count>0)>0) {
-    stop("Non gestisce (ancora) modelli con dati mancanti.")
+    FORMULA <- formula(fit)$formula
   }
   
+  X <- attr(terms(FORMULA), which = "term.labels")
+  Y <- as.character(attr(terms(FORMULA), which = "variables")[[2]])
+  FORMULA <- paste0("y ~ ",paste(X, collapse=" + "))
+  PREDS <-  X <- X[!grepl(":",X)] 
+  Z <- na.omit( fit$data[c(Y,PREDS)] )
   
   if (package[1] == "rstanarm") {
     pp <- data.frame(t(rstanarm::posterior_predict(fit)))
-  }
-  else {
+  } else {
     pp <- data.frame(t(brms::posterior_predict(fit)))
   }
   if (npred == 1) {
@@ -85,8 +79,7 @@ bayes_eta2 <- function(fit, partial = FALSE,
                           Error = apply(ETApost, 2, mad))
     if (posterior) {
       return(list(ETAstat = ETAstat, ETApost = ETApost))
-    }
-    else {
+    } else {
       return(ETAstat)
     }
   }
@@ -94,4 +87,3 @@ bayes_eta2 <- function(fit, partial = FALSE,
 }
 
 #bayes_eta2( fit )
-
