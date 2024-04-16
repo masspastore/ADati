@@ -1,6 +1,6 @@
 # ADati 
 
-Versione 5.5.1, ultimo aggiornamento 2024-04-10.
+Versione 5.5.1, ultimo aggiornamento 2024-04-15.
 
 Miscellanea di funzioni e dati di supporto al manuale 'Analisi dei dati in Psicologia', Pastore M., Il Mulino, 2015.
 
