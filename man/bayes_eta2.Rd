@@ -33,12 +33,12 @@ Se \code{posterior = TRUE} restituisce anche le distribuzioni a posteriori.
 data( ESdata )
 
 # modello con rstanarm
-fit <- rstanarm::stan_glm( ChildBeh ~ ParSty * HighSens, data = ESdata, chains = 1 ) 
-bayes_eta2( fit )
+# fit <- rstanarm::stan_glm( ChildBeh ~ ParSty * HighSens, data = ESdata, chains = 1 ) 
+# bayes_eta2( fit )
 
 # modello con brms
-fit <- brms::brm( ChildBeh ~ ParSty * HighSens, data = ESdata, chains = 1 ) 
-bayes_eta2( fit )
+# fit <- brms::brm( ChildBeh ~ ParSty * HighSens, data = ESdata, chains = 1 ) 
+# bayes_eta2( fit )
 
 }
 \keyword{htest}
