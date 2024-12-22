@@ -1,22 +1,29 @@
+  CHANGES IN ADati VERSION 5.5.2
+
+CHANGES
+  * aggiunte le funzioni check_model_stanarm(), hat_values_stanarm() e cooks_distance_stanarm() per i grafici di diagnostica sui modelli ottenuti con rstanarm.
+  * modificato il dataset ecoansia.
+  * eliminata la funzione lmer_check().
+
   CHANGES IN ADati VERSION 5.5.1
 
 CHANGES
   * aggiunta gestione dati mancanti sulla funzione bayes_eta2(). 
-  * aggiunto ordinamento nella funzione plot_relative_evidence
+  * aggiunto ordinamento nella funzione plot_relative_evidence().
   
   CHANGES IN ADati VERSION 5.5
 
 CHANGES
   * aggiunto dataset ecoansia
-  * modificata la funzione plot_relative_evidence con aggiunta parametro U per gestire i margini della figura.
-  * aggiunte funzioni bayes_eta2 e model.predictions.rstanarm
+  * modificata la funzione plot_relative_evidence() con aggiunta parametro U per gestire i margini della figura.
+  * aggiunte funzioni bayes_eta2() e model.predictions.rstanarm().
 
   CHANGES IN ADati VERSION 5.4.4
 
 CHANGES
   * aggiunto i seguenti dataset: 
     crimi, gothic, impiegati, inibition, mathschool, OBQ, QOLAD, radon, SNA1, vaes2015, Worland   
-  * modificata la funzione plot_relative_evidence.
+  * modificata la funzione plot_relative_evidence().
 
   CHANGES IN ADati VERSION 5.4.3
 
