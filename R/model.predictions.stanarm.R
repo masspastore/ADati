@@ -1,14 +1,16 @@
 #' funzioni per ADati
 #' Data frame con le previsioni del modello
-#' @param fit = modello lineare ottenuto con lm
+#' @param fit = modello lineare ottenuto con stan_glm
 #' @param B = numero di campioni da simulare 
-model.predictions <- function( fit, B = 100 ) {
-  Y <- stack(simulate(fit, B))
+model.predictions.stanarm <- function( fit, B = 100 ) {
+  
+  Y <- t(rstanarm::posterior_predict( fit, draws = B ))
+  Y <- stack( data.frame( Y ) )
   colnames(Y) <- c("simY","b")
   data <- fit$model
   
   modVar <- attr(fit$terms,"dataClasses")
-  XVar <- modVar[-1]
+  XVar <- modVar
   
   if (length(XVar)>0) {
     for (j in names(XVar)) {

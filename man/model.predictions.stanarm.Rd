@@ -1,23 +1,23 @@
-\name{model.predictions}
-\alias{model.predictions}
+\name{model.predictions.stanarm}
+\alias{model.predictions.stanarm}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Previsioni di un modello lineare}
 \description{
-Produce un data frame con le previsioni di un modello lineare.
+Produce un data frame con le previsioni di un modello lineare ottenuto con il pacchetto \code{rstanarm}.
 }
 \usage{
-model.predictions( fit, B = 100 )
+model.predictions.stanarm( fit, B = 100 )
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{fit}{oggetto ottenuto con la funzione \code{lm}.}
+  \item{fit}{modello lineare ottenuto con \code{rstanarm}.}
   \item{B}{numero di campioni da simulare, per default 100.}
 }
 %\details{
 %Se \code{y} non viene specificato esegue automaticamente il test a campione singolo.
 %}
 \value{
-Restituisce un data frame con le seguenti colonne
+Restituisce un data frame in forma lunga con le seguenti colonne
   \item{$simY}{valori della variabile dipendente simulati dal modello.}
   \item{$b}{etichetta per identificare il campione simulato.}
   \item{...}{valori osservati dei predittori usati nel modello lineare.}
@@ -29,13 +29,13 @@ Restituisce un data frame con le seguenti colonne
 \examples{
 data( studenti, package = "ADati" )
 # null model
-fit0 <- lm(voti~1,data=studenti)
-Y <- model.predictions( fit0 )
+fit0 <- rstanarm::stan_glm( voti~1, data = studenti, chains = 1)
+Y <- model.predictions.stanarm( fit0 )
 hist( Y$simY )
  
 # modello con due predittori
-fit <- lm(voti~ore+anno, data = studenti)
-Y <- model.predictions( fit, 100 )
+fit <- rstanarm::stan_glm( voti~ore+anno, data = studenti, chains = 1 )
+Y <- model.predictions.stanarm( fit, 100 )
 par( mfrow=c(1,3))
 for (j in levels(Y$anno)) plot( simY ~ ore, data = subset(Y,anno==j))
  
