@@ -1,14 +1,23 @@
 
 check_model_data <- function(fit, cook_levels = c(.5,1)) {
 
-  # per gestire i mancanti
+  # per gestire i mancanti ------
   coef.names <- names(rstanarm::fixef(fit))
   npred <- length(rstanarm::fixef(fit))
   FORMULA <- formula(fit)
   X <- attr(terms(FORMULA), which = "term.labels")
+  
+  # gestione effetti random
+  if ( sum(grepl("\\|",X)) > 0 ) {
+    L <- strsplit(X,split = " \\| ")
+    X <- unlist(L)
+  }
+  
   Y <- as.character(attr(terms(FORMULA), which = "variables")[[2]])
   FORMULA <- paste0("y ~ ",paste(X, collapse=" + "))
-  PREDS <-  X <- X[!grepl(":",X)] 
+  PREDS <- X <- X[!grepl(":",X)] 
+  PREDS <- PREDS[PREDS%in%colnames(fit$data)]
+  # -----
   
   modelData <- na.omit( fit$data[c(Y,PREDS)] )
   modelData$.x <- 1:nrow(modelData)
