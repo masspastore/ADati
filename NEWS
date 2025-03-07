@@ -1,3 +1,8 @@
+  CHANGES IN ADati VERSION 5.5.3
+
+CHANGES
+  * aggiunte le funzioni var2() e sd2() che calcolano rispettivamente varianza e deviazione standard non corrette.	
+
   CHANGES IN ADati VERSION 5.5.2
 
 CHANGES

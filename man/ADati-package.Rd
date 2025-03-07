@@ -15,17 +15,17 @@ NOTA: Alcune funzioni richiedono il pacchetto \code{gtools} e il pacchetto \code
 \tabular{ll}{
 Package: \tab ADati\cr
 Type: \tab Package\cr
-Version: \tab 5.5.2\cr
+Version: \tab 5.5.3\cr
 Depends: \tab R (>= 3.5.0)\cr
 Imports: \tab ggplot2, lavaan, reshape, heplots, rstanarm\cr
 Suggests: \tab MASS, gtools, brms\cr
-Date: \tab 2024-12-31\cr
+Date: \tab 2025-03-07\cr
 License: \tab GPL-2\cr
 Encoding: \tab UTF-8\cr
 }
 }
 \author{Massimiliano Pastore}
 \references{
-Pastore, M. (2014). Analisi di dati quantitativi in Psicologia (e applicazioni con R), versione 5.5 URL: \url{https://elearning.unipd.it/scuolapsicologia/}.
+Pastore, M. (2015). Analisi dei dati in Psicologia (e applicazioni con R). Il Mulino, Bologna. URL: \url{https://lilia.dpss.psy.unipd.it/~massimiliano.pastore/Ilmulino.html}.
 }
 
