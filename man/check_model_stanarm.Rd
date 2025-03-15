@@ -7,14 +7,16 @@ Produce i grafici per le diagnostiche di un modello ottenuto con il pacchetto \c
 }
 \usage{
 check_model_stanarm( fit, all = FALSE, 
-      cook_levels = c(.5,1), cex = 3 ) 
+      cook_levels = c(.5,1), cex = 3, 
+      whichplot = 1:6  ) 
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{fit}{oggetto ottenuto con la funzione \code{stan_glm()} o \code{stan_glmer()}.}
   \item{all}{logico, se posto a \code{TRUE} (il default) produce tutti i grafici insieme.}
-  \item{cook_levels}{vettore numerico, per default \code{c(.5,1)}, indica le soglie per rappresentare la distanza di Cook.}
+  \item{cook_levels}{vettore numerico, per default \code{c(.5,1)}, indica le soglie per rappresentare la distanza di Cook. Deve avere al massimo due valori.}
   \item{cex}{valore numerico che indica la grandezza dei punti.}
+  \item{whichplot}{vettore numerico tra 1 e 6, che indica quali grafici produrre, per default tutti.}
 }
 %\details{
 %Se \code{y} non viene specificato esegue automaticamente il test a campione singolo.
