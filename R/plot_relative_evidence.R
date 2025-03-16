@@ -8,6 +8,8 @@
 #angle <- 0
 #return_table <- FALSE
 #short.names <- TRUE
+#ordered <- TRUE
+#U=c(0,0,0,0)
 #######################################################
 #' @title Grafico evidenza relativa
 #' @param weights = vettore contenente AIC-weights (preferibile che names siano i nomi modelli)
@@ -27,7 +29,7 @@ plot_relative_evidence <- function(weights,labels=NULL,log=TRUE,
   } 
 
   if (ordered) {
-    w <- sort(weights)
+    w <- sort(weights, decreasing = TRUE)
   } else {
     w <- weights
   }
@@ -47,6 +49,11 @@ plot_relative_evidence <- function(weights,labels=NULL,log=TRUE,
     }
   }
   rownames(RR) <- colnames(RR) <- names(w)
+  
+  
+  
+  
+  
   RRplot <- reshape::melt(RR)
   colnames(RRplot)[1:2] <- c("X1","X2")
   RRplot$X2 <- factor(RRplot$X2, levels = names(w)[length(w):1], ordered = TRUE)
