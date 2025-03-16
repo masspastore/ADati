@@ -2,6 +2,7 @@
 
 CHANGES
   * aggiunte le funzioni var2() e sd2() che calcolano rispettivamente varianza e deviazione standard non corrette.	
+  * aggiunta la funzione check_ranef_stanarm() che produce i QQplot degli effetti random.
 
   CHANGES IN ADati VERSION 5.5.2
 
