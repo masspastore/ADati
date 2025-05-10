@@ -24,9 +24,9 @@ plot_relative_evidence( weights, labels = NULL, log = TRUE,
   \item{short.names}{logico, se posto a \code{TRUE} modifica i nomi delle colonne della tabella. Da usarsi per rendere più leggibile la tabella.}
 
 }
-%\details{
-%Richiede il pacchetto \code{reshape}.
-%}
+\details{
+Richiede il pacchetto \code{reshape2}.
+}
 \value{
 Restituisce un grafico con una matrice quadrata di dimensione \code{length(weights)} \eqn{\times} \code{length(weights)}. Ogni cella della matrice rappresenta il rapporto \eqn{w_i/w_j} oppure, se \code{log = TRUE}, il log-rapporto \eqn{log(w_i/w_j)}, in cui \eqn{w_i} è il \code{weight} del modello sulla riga e  \eqn{w_j} il modello sulla colonna. 
 }

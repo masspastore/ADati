@@ -1,3 +1,9 @@
+  CHANGES IN ADati VERSION 5.5.4
+
+CHANGES
+  * corretto un bug nella funzione plot_relative_evidence().	
+  * eliminata la funzione doppia model.predictions.rstanarm().
+
   CHANGES IN ADati VERSION 5.5.3
 
 CHANGES

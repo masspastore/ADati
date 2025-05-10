@@ -50,11 +50,7 @@ plot_relative_evidence <- function(weights,labels=NULL,log=TRUE,
   }
   rownames(RR) <- colnames(RR) <- names(w)
   
-  
-  
-  
-  
-  RRplot <- reshape::melt(RR)
+  RRplot <- reshape2::melt(RR)
   colnames(RRplot)[1:2] <- c("X1","X2")
   RRplot$X2 <- factor(RRplot$X2, levels = names(w)[length(w):1], ordered = TRUE)
   RRplot$X1 <- factor(RRplot$X1, levels = names(w)[length(w):1], ordered = TRUE)
