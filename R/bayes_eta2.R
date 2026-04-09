@@ -1,5 +1,6 @@
 #rm(list=ls())
 #data(ESdata, package = "ADati")
+#data("monkeys", package = "ADati")
 #partial <- FALSE
 #posterior <- FALSE
 
@@ -16,6 +17,7 @@
 #                           data = ESdata, chains = 1 ) 
 #fit <- brms::brm( ChildBeh ~ ParSty*HighSens, 
 #                           data = ESdata, chains = 1 ) 
+#fit <- rstanarm::stan_glm( score ~ drug+fdep, data = monkeys, chains = 1)
 
 #' @name bayes_eta2
 #' @description Calcola le posterior degli eta-squared di un modello ottenuto con brms
@@ -41,7 +43,7 @@ bayes_eta2 <- function(fit, partial = FALSE,
   X <- attr(terms(FORMULA), which = "term.labels")
   Y <- as.character(attr(terms(FORMULA), which = "variables")[[2]])
   FORMULA <- paste0("y ~ ",paste(X, collapse=" + "))
-  PREDS <-  X <- X[!grepl(":",X)] 
+  PREDS <- X[!grepl(":",X)] 
   Z <- na.omit( fit$data[c(Y,PREDS)] )
   
   if (package[1] == "rstanarm") {
@@ -61,7 +63,7 @@ bayes_eta2 <- function(fit, partial = FALSE,
       ETA <- ETA[-length(ETA)]
       return(ETA)
     }), ncol = 1))
-    colnames(ETApost) <- coef.names[-1]
+    colnames(ETApost) <- X #coef.names[-1]
   }
   if (npred > 2) {
     ETApost <- data.frame(t(sapply(1:ncol(pp), function(j) {
@@ -70,7 +72,7 @@ bayes_eta2 <- function(fit, partial = FALSE,
       ETA <- heplots::etasq(fit, partial = partial)[, 
                                                     1]
       ETA <- ETA[-length(ETA)]
-      names(ETA) <- coef.names[-1]
+      names(ETA) <- X # coef.names[-1]
       return(ETA)
     })))
   }
