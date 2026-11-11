@@ -1,5 +1,5 @@
 exportPattern("^[[:alpha:]]+")
-import(ggplot2,lavaan,reshape,heplots,rstanarm)
+import(ggplot2,lavaan,reshape2,heplots,rstanarm)
 importFrom("graphics", "abline", "curve", "hist", "par", "layout")
 importFrom("stats","BIC","formula","density", "dnorm","simulate", 
            "na.omit", "var","cor","qt", "sd", "pnorm","cooks.distance",
@@ -8,3 +8,4 @@ importFrom("stats","BIC","formula","density", "dnorm","simulate",
           "median","mad","terms","model.matrix","coefficients","qqnorm")
 importFrom("utils", "stack")
 importFrom("cowplot","plot_grid")
+
